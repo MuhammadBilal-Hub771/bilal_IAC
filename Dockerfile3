@@ -1,0 +1,13 @@
+FROM ubuntu:20.04
+
+# Install nginx
+RUN apt-get update && apt-get install -y nginx
+
+# Copy website content
+COPY . /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
