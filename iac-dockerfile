@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt update
-RUN apt install nginx -y
-#ADD https://github.com/MuhammadBilal-Hub771/bilal_IAC.git
+RUN apt update && apt install nginx -y
+ADD https://github.com/MuhammadBilal-Hub771/bilal_IAC.git /opt/app
 WORKDIR /opt/app
-#COPY iac-text-file /usr/share/nginx/html
+COPY index.html /usr/share/nginx/html/index.html
 CMD ["nginx", "-g", "daemon off;"]
