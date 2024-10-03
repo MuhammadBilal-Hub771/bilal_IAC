@@ -1,7 +1,8 @@
+version: '3'
 services:
   nginx_image:
     build:
-      context: /home/ubuntu/Bilal       # Path where your Dockerfile is located
+      context: /home/ubuntu/Bilal     # Path where your Dockerfile is located
       dockerfile: iac-dockerfile         # Name of your Dockerfile (change it if necessary)
     image: iac-website               # Image name to create
     container_name: iac-website      # Name of the container
