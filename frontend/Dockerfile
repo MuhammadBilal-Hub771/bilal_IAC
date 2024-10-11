@@ -10,6 +10,7 @@ COPY package*.json ./
 # Install the frontend dependencies
 RUN npm install
 
+RUN ls -al /usr/src/app 
 # Copy the React app source code
 COPY ./frontend/ ./
 
